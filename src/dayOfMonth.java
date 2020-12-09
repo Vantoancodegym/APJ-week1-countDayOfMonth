@@ -6,6 +6,7 @@ public class dayOfMonth {
         Scanner scanner =new Scanner(System.in);
         System.out.print("Input which month you want to count");
         int month = scanner.nextInt();
+        String dayOfMonth;
         switch (month){
             case 1:
             case 3:
@@ -14,19 +15,25 @@ public class dayOfMonth {
             case 8:
             case 10:
             case 12:
-                System.out.println("this month has 31 days");
+                dayOfMonth = "31";
                 break;
             case 2:
-                System.out.println("this month has 28 or 29 days");
+                dayOfMonth= "28 or 29";
                 break;
             case 4:
             case 6:
             case 9:
             case 11:
-                System.out.println("this month has 30 days");
+                dayOfMonth = "30";
                 break;
             default:
-                System.out.println("invalid month");
+                dayOfMonth = "";
+        }
+        if (dayOfMonth!="") {
+            System.out.println("this month has "+dayOfMonth+" days");
+        }else {
+            System.out.println("Invalid month");
+        }
         }
     }
-}
+
